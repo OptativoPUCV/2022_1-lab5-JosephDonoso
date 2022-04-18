@@ -98,7 +98,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
     while( tree->current != NULL){
         
-        if (  (int )tree->current->pair->key == (int )key) return (Pair* ) tree->current->pair;
+        if (  (int *)tree->current->pair->key == (int *)key) return (Pair* ) tree->current->pair;
 
         if( tree->current->pair->key > key ){
             tree->current = tree->current->left;
