@@ -95,11 +95,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     tree->current = tree->root;
     while( tree->current ){
 
-        int* keyCurrent = (int*) tree->current->pair->key;
-        int* keyAux = (int*) key;
-        if (  *keyCurrent == *keyAux) return (Pair* ) tree->current->pair;
+        //int* keyCurrent = (int*) tree->current->pair->key;
+        //int* keyAux = (int*) key;
+        if ( is_equal(tree, tree->current->pair->key, key) ) return (Pair* ) tree->current->pair;
 
-        if( *keyCurrent > *keyAux ){
+        if( lower_than ( tree->current->pair->key, key)){
             tree->current = tree->current->left;
         }
         else{
