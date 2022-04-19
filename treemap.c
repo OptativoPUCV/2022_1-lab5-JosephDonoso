@@ -112,13 +112,23 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         //node->pair = nodeAux->pair;                     
        // removeNode( tree, nodeAux );
     }
-    else{/*
+    else{
+        TreeNode* nodeAux;
+        if( node->left ){
+                nodeAux = node->left;
+            }
+            else{                                           
+                nodeAux = node->right;
+            }
+        
+        
+        /*
         TreeNode* nodeAux;
         if( tree->lower_than( node->parent->pair->key, node->pair->key ) ){
             if( node->left ){
                 nodeAux = node->left;
             }
-            else{
+            else{                                           //AL REVES QUIZA
                 nodeAux = node->right;
             }
             nodeAux->parent = node->parent;                                                 //ERROR AQUI

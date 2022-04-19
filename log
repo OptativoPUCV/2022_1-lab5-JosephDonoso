@@ -302,3 +302,14 @@ ma., 19 de abr. de 2022 18:44:16:
  tests:  16|4
 total_score: 30/70
 64a9748
+ma., 19 de abr. de 2022 18:44:36: 
+ treemap.c | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function 'removeNode':
+treemap.c:116:19: error: variable 'nodeAux' set but not used [-Werror=unused-but-set-variable]
+         TreeNode* nodeAux;
+                   ^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+ac60bef
