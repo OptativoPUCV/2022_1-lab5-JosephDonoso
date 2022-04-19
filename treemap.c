@@ -101,11 +101,12 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         }
         else{
             node->parent->left = NULL;
-            
         }
     }
     else if( node->left && node->right ){
-
+        TreeNode* nodeAux = minimum(node);
+        node->pair = nodeAux->pair;
+        removeNode( tree, nodeAux );
     }
     else{
 
