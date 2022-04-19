@@ -123,7 +123,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         nodeAux->parent = node->parent;
         
         if( tree->lower_than( node->parent->pair->key, node->pair->key ) ){
-            //node->parent->right = nodeAux;
+            node->parent->right = nodeAux;
         }
         else{
             node->parent->left = nodeAux;
