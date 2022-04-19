@@ -313,3 +313,9 @@ treemap.c:116:19: error: variable 'nodeAux' set but not used [-Werror=unused-but
 cc1.exe: all warnings being treated as errors
 Compilation failed
 ac60bef
+ma., 19 de abr. de 2022 18:46:02: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  16|4
+total_score: 30/70
+9828fb2
