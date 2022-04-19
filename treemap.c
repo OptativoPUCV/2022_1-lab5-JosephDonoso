@@ -100,10 +100,10 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         if ( is_equal(tree, tree->current->pair->key, key) ) return (Pair* ) tree->current->pair;
 
         if( tree->lower_than( tree->current->pair->key, key)){
-            tree->current = tree->current->left;
+            tree->current = tree->current->right;
         }
         else{
-            tree->current = tree->current->right;
+            tree->current = tree->current->left;
         }
         
     } 
