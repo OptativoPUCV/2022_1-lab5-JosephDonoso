@@ -192,3 +192,9 @@ ma., 19 de abr. de 2022 15:48:09:
  tests:  12|6
 total_score: 15/70
 c637894
+ma., 19 de abr. de 2022 15:48:58: 
+ treemap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  13|5
+total_score: 25/70
+d45aa67
