@@ -52,9 +52,9 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     while( tree->current ){
         int* keyCurrent = (int*) tree->current->pair->key;
         int* keyAux = (int*) key;
-        if ( keyCurrent == keyAux ) return;
+        if ( *keyCurrent == *keyAux ) return;
 
-        if( keyCurrent > keyAux ){
+        if( *keyCurrent > *keyAux ){
             tree->current = tree->current->left;
         }
         else{
