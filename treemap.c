@@ -121,12 +121,12 @@ void removeNode(TreeMap * tree, TreeNode* node) {
                 nodeAux = node->right;
             }
         nodeAux->parent = node->parent;
-        
+        TreeNode* nodeParentAux = node->parent;
         if( tree->lower_than( node->parent->pair->key, node->pair->key ) ){
-            node->parent->right = nodeAux;
+            nodeParentAux->right = nodeAux;
         }
         else{
-            node->parent->left = nodeAux;
+            nodeParentAux->left = nodeAux;
         }
         /*
         TreeNode* nodeAux;
