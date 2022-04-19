@@ -279,3 +279,9 @@ ma., 19 de abr. de 2022 18:04:32:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 0dda891
+ma., 19 de abr. de 2022 18:05:53: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  16|4
+total_score: 30/70
+05e46dc
