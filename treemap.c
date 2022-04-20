@@ -173,7 +173,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-
+    if( !tree->current ) return firstTreeMap(tree);
     if( tree->current->right ){
         tree->current = minimum( tree->current->right );
         return tree->current->pair;
@@ -186,7 +186,7 @@ Pair * nextTreeMap(TreeMap * tree) {
             } 
             tree->current = tree->current->parent;
         }
-        //tree->current = tree->current->parent;
+        tree->current = tree->current->parent;
         return NULL;
     }
 }
