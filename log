@@ -436,3 +436,20 @@ treemap.c:184:1: error: control reaches end of non-void function [-Werror=return
 cc1.exe: all warnings being treated as errors
 Compilation failed
 77ad3e9
+mi., 20 de abr. de 2022  9:52:30: 
+ treemap.c | 2 --
+ 1 file changed, 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function 'nextTreeMap':
+treemap.c:179:25: error: implicit declaration of function 'minimun' [-Werror=implicit-function-declaration]
+         tree->current = minimun(tree->current->left);
+                         ^~~~~~~
+treemap.c:179:23: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+         tree->current = minimun(tree->current->left);
+                       ^
+treemap.c:184:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+813bc8e
