@@ -178,6 +178,13 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = minimum( tree->current->left );
         return tree->current->pair;
     }
-    
-    return NULL;
+    else{
+        while( tree->current->parent ){
+            if ( !tree->lower_than(tree->current->parent->pair->key , tree->current->pair->key) ){
+                return tree->current->parent->pair;
+            } 
+            tree->current = tree->current->parent;
+        }
+        return NULL;
+    }
 }
