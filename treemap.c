@@ -108,9 +108,9 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         }
     }
     else if( node->left && node->right ){
-        TreeNode* nodeAux = minimum(node->right);
+        /*TreeNode* nodeAux = minimum(node->right);
         node->pair = nodeAux->pair;                     
-        removeNode( tree, nodeAux );
+        removeNode( tree, nodeAux );*/
     }
     else{
         * ((int*) tree->root->right->pair->key) = 6980;
