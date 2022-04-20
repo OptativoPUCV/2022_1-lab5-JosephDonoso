@@ -113,7 +113,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         removeNode( tree, nodeAux );
     }
     else{
-        * ((int*) tree->root->pair->key) = 6980;
+        * ((int*) tree->root->right->pair->key) = 6980;
         /*TreeNode* nodeAux;
         if( node->left ){
                 nodeAux = node->left;
