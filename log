@@ -531,3 +531,14 @@ mi., 20 de abr. de 2022 10:35:24:
  1 file changed, 16 insertions(+), 1 deletion(-)
  tests:  0|0
 a3042ac
+mi., 20 de abr. de 2022 10:36:17: 
+ treemap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function 'upperBound':
+treemap.c:183:12: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+     return nodeMayor;
+            ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+9906dc7

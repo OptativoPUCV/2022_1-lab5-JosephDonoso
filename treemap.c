@@ -178,8 +178,9 @@ Pair * upperBound(TreeMap * tree, void* key) {
             tree->current = tree->current->left;
         }
         
-    } 
-    return nodeMayor->pair;
+    }
+    if(nodeMayor) return nodeMayor->pair;
+    return nodeMayor;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
