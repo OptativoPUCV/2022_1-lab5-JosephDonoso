@@ -109,8 +109,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         node->pair = nodeAux->pair;                     
         removeNode( tree, nodeAux );
     }
-    else{
-        //* ((int*) tree->root->right->pair->key) = 6980;
+    else{ //Nodo con 1 hijo
         TreeNode* nodeAux;
         if( node->left ){
                 nodeAux = node->left;
@@ -126,28 +125,6 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         else{
             nodeParentAux->left = nodeAux;
         }
-        /*
-        TreeNode* nodeAux;
-        if( tree->lower_than( node->parent->pair->key, node->pair->key ) ){
-            if( node->left ){
-                nodeAux = node->left;
-            }
-            else{                                           //AL REVES QUIZA
-                nodeAux = node->right;
-            }
-            nodeAux->parent = node->parent;                                                 //ERROR AQUI
-            node->parent->right = nodeAux;
-        }
-        else{
-            if( node->right ){
-                nodeAux = node->left;
-            }
-            else{
-                nodeAux = node->right;
-            }
-            nodeAux->parent = node->parent;
-            node->parent->left = nodeAux;
-        }*/
     }
 }
 
@@ -187,7 +164,9 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-    return NULL;
+    TreeNode* aux = minimum( tree->root );
+
+    return aux->pair;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
